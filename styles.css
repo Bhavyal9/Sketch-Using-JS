@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(174, 248, 248);
+}
+
+.canvas-container{
+    height:600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+button{
+    display: block;
+    width:200px;
+    padding:10px;
+    background-color: rgb(51, 158, 158);
+    border: 0;
+    border-radius: 10px;
+    color:white;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color:rgb(31, 107, 107) ;
+}
+
+canvas{
+    height:400px;
+    width:600px;
+    background-color: white;
+    border: 5px solid  rgb(51, 158, 158);
+}
+
+.shake{
+    animation: horizontal-shaking 0.5s;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+   
+.terms{
+    margin:20px 150px;
+    padding:10px;
+    border: 2px solid black;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+}
+
+.content{
+    overflow-y:auto;
+    text-align:justify;
+    line-height:2;
+    height:100%;
+}
+
+.submitBtn[disabled]{
+    opacity:0.4;
+}
+
+hr{
+    margin:10px;
+}
+
+div[role="tablist"]{
+    display:flex;
+}
+
+button[aria-selected="true"]{
+    background-color:"yellow";
+}
